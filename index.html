@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abarbanel - Enseignements Audio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Abarbanel</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil" data-lang="nav-home">Accueil</a></li>
+                <li><a href="#a-propos" data-lang="nav-about">À propos</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="fr">FR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="he">עב</button>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1 data-lang="hero-title">Enseignements Audio</h1>
+            <p data-lang="hero-description">Découvrez plus de 200 enseignements audio organisés par paracha et sefer</p>
+        </section>
+
+        <section class="search-filters">
+            <input type="text" class="search-bar" id="searchInput" data-lang-placeholder="search-placeholder" placeholder="Rechercher dans les enseignements...">
+            <div class="filters">
+                <select class="filter-select" id="seferFilter">
+                    <option value="" data-lang="filter-all-sefer">Tous les Sefarim</option>
+                    <option value="berechit">Beréchit</option>
+                    <option value="chemot">Chemot</option>
+                    <option value="vayikra">Vayikra</option>
+                    <option value="bamidbar">Bamidbar</option>
+                    <option value="devarim">Devarim</option>
+                    <option value="fetes">Fêtes Juives</option>
+                </select>
+                <select class="filter-select" id="sortFilter">
+                    <option value="title" data-lang="sort-title">Trier par titre</option>
+                    <option value="date" data-lang="sort-date">Trier par date</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="sefer-grid" id="seferGrid">
+            <!-- Sefer cards will be populated by JavaScript -->
+        </section>
+
+        <section class="paracha-list" id="parachaList">
+            <!-- Paracha content will be populated by JavaScript -->
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
